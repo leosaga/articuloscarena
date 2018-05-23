@@ -7,11 +7,11 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{1A03C053-104D-490E-9DEB-24FF19A26DE1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <StartupObject>WindowsApplication1.ModuloPrincipal</StartupObject>
     <RootNamespace>WindowsApplication1</RootNamespace>
     <AssemblyName>ABM_Articulos</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <OptionExplicit>On</OptionExplicit>
     <OptionCompare>Binary</OptionCompare>
@@ -118,6 +118,9 @@
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
     <None Include="My Project\DataSources\ArticulosCollection.datasource" />
+    <None Include="My Project\DataSources\ArticulosCollection1.datasource" />
+    <None Include="My Project\DataSources\ArticulosCollection2.datasource" />
+    <None Include="My Project\DataSources\ArticulosCollection3.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>

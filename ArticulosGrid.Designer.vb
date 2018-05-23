@@ -24,6 +24,11 @@ Partial Class ArticulosGrid
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.nuevo = New System.Windows.Forms.Button
+        Me.eleminar = New System.Windows.Forms.Button
+        Me.modificar = New System.Windows.Forms.Button
+        Me.salir = New System.Windows.Forms.Button
+        Me.ArticulosCollectionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CodigoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.IvaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -32,11 +37,7 @@ Partial Class ArticulosGrid
         Me.CostoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.UtilidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.VentaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ArticulosCollectionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.nuevo = New System.Windows.Forms.Button
-        Me.eleminar = New System.Windows.Forms.Button
-        Me.modificar = New System.Windows.Forms.Button
-        Me.salir = New System.Windows.Forms.Button
+        Me.DetalleivaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ArticulosCollectionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -47,13 +48,53 @@ Partial Class ArticulosGrid
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CodigoDataGridViewTextBoxColumn, Me.IvaDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.UnidadDataGridViewTextBoxColumn, Me.StockDataGridViewTextBoxColumn, Me.CostoDataGridViewTextBoxColumn, Me.UtilidadDataGridViewTextBoxColumn, Me.VentaDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CodigoDataGridViewTextBoxColumn, Me.IvaDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.UnidadDataGridViewTextBoxColumn, Me.StockDataGridViewTextBoxColumn, Me.CostoDataGridViewTextBoxColumn, Me.UtilidadDataGridViewTextBoxColumn, Me.VentaDataGridViewTextBoxColumn, Me.DetalleivaDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ArticulosCollectionBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(12, 22)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(701, 380)
+        Me.DataGridView1.Size = New System.Drawing.Size(961, 354)
         Me.DataGridView1.TabIndex = 0
+        '
+        'nuevo
+        '
+        Me.nuevo.Location = New System.Drawing.Point(48, 389)
+        Me.nuevo.Name = "nuevo"
+        Me.nuevo.Size = New System.Drawing.Size(75, 23)
+        Me.nuevo.TabIndex = 1
+        Me.nuevo.Text = "Nuevo"
+        Me.nuevo.UseVisualStyleBackColor = True
+        '
+        'eleminar
+        '
+        Me.eleminar.Location = New System.Drawing.Point(578, 389)
+        Me.eleminar.Name = "eleminar"
+        Me.eleminar.Size = New System.Drawing.Size(75, 23)
+        Me.eleminar.TabIndex = 2
+        Me.eleminar.Text = "Eleminar"
+        Me.eleminar.UseVisualStyleBackColor = True
+        '
+        'modificar
+        '
+        Me.modificar.Location = New System.Drawing.Point(279, 389)
+        Me.modificar.Name = "modificar"
+        Me.modificar.Size = New System.Drawing.Size(75, 23)
+        Me.modificar.TabIndex = 3
+        Me.modificar.Text = "Modificar"
+        Me.modificar.UseVisualStyleBackColor = True
+        '
+        'salir
+        '
+        Me.salir.Location = New System.Drawing.Point(785, 389)
+        Me.salir.Name = "salir"
+        Me.salir.Size = New System.Drawing.Size(75, 23)
+        Me.salir.TabIndex = 4
+        Me.salir.Text = "salir"
+        Me.salir.UseVisualStyleBackColor = True
+        '
+        'ArticulosCollectionBindingSource
+        '
+        Me.ArticulosCollectionBindingSource.DataSource = GetType(WindowsApplication1.ArticulosCollection)
         '
         'CodigoDataGridViewTextBoxColumn
         '
@@ -111,57 +152,25 @@ Partial Class ArticulosGrid
         Me.VentaDataGridViewTextBoxColumn.Name = "VentaDataGridViewTextBoxColumn"
         Me.VentaDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'ArticulosCollectionBindingSource
+        'DetalleivaDataGridViewTextBoxColumn
         '
-        Me.ArticulosCollectionBindingSource.DataSource = GetType(WindowsApplication1.ArticulosCollection)
-        '
-        'nuevo
-        '
-        Me.nuevo.Location = New System.Drawing.Point(57, 340)
-        Me.nuevo.Name = "nuevo"
-        Me.nuevo.Size = New System.Drawing.Size(75, 23)
-        Me.nuevo.TabIndex = 1
-        Me.nuevo.Text = "Nuevo"
-        Me.nuevo.UseVisualStyleBackColor = True
-        '
-        'eleminar
-        '
-        Me.eleminar.Location = New System.Drawing.Point(220, 339)
-        Me.eleminar.Name = "eleminar"
-        Me.eleminar.Size = New System.Drawing.Size(75, 23)
-        Me.eleminar.TabIndex = 2
-        Me.eleminar.Text = "Eleminar"
-        Me.eleminar.UseVisualStyleBackColor = True
-        '
-        'modificar
-        '
-        Me.modificar.Location = New System.Drawing.Point(372, 339)
-        Me.modificar.Name = "modificar"
-        Me.modificar.Size = New System.Drawing.Size(75, 23)
-        Me.modificar.TabIndex = 3
-        Me.modificar.Text = "Modificar"
-        Me.modificar.UseVisualStyleBackColor = True
-        '
-        'salir
-        '
-        Me.salir.Location = New System.Drawing.Point(542, 340)
-        Me.salir.Name = "salir"
-        Me.salir.Size = New System.Drawing.Size(75, 23)
-        Me.salir.TabIndex = 4
-        Me.salir.Text = "Button4"
-        Me.salir.UseVisualStyleBackColor = True
+        Me.DetalleivaDataGridViewTextBoxColumn.DataPropertyName = "detalleiva"
+        Me.DetalleivaDataGridViewTextBoxColumn.HeaderText = "detalleiva"
+        Me.DetalleivaDataGridViewTextBoxColumn.Name = "DetalleivaDataGridViewTextBoxColumn"
+        Me.DetalleivaDataGridViewTextBoxColumn.ReadOnly = True
         '
         'ArticulosGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(725, 424)
+        Me.ClientSize = New System.Drawing.Size(985, 424)
         Me.Controls.Add(Me.salir)
         Me.Controls.Add(Me.modificar)
         Me.Controls.Add(Me.eleminar)
         Me.Controls.Add(Me.nuevo)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "ArticulosGrid"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ArticulosGrid"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ArticulosCollectionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -169,6 +178,10 @@ Partial Class ArticulosGrid
 
     End Sub
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents nuevo As System.Windows.Forms.Button
+    Friend WithEvents eleminar As System.Windows.Forms.Button
+    Friend WithEvents modificar As System.Windows.Forms.Button
+    Friend WithEvents salir As System.Windows.Forms.Button
     Friend WithEvents CodigoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents IvaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DescripcionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -177,9 +190,6 @@ Partial Class ArticulosGrid
     Friend WithEvents CostoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents UtilidadDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents VentaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DetalleivaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ArticulosCollectionBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents nuevo As System.Windows.Forms.Button
-    Friend WithEvents eleminar As System.Windows.Forms.Button
-    Friend WithEvents modificar As System.Windows.Forms.Button
-    Friend WithEvents salir As System.Windows.Forms.Button
 End Class

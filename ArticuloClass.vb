@@ -1,7 +1,10 @@
 ﻿Public Class ArticuloClass
     Dim codigo_, iva_ As Integer
     Dim descripcion_, unidad_ As String
+ 
+
     Dim stock_, costo_, utilidad_, venta_ As Decimal
+
 
 
 
@@ -72,6 +75,12 @@
     End Property
 
 
+    Public ReadOnly Property detalleiva() As String
+        Get
+            Return listaiva_(iva_)
+        End Get
+
+    End Property
 
 
 End Class

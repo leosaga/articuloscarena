@@ -38,6 +38,8 @@ Partial Class ArticuloForm
         Me.stock1 = New System.Windows.Forms.TextBox
         Me.ComboBox1 = New System.Windows.Forms.ComboBox
         Me.ComboBox2 = New System.Windows.Forms.ComboBox
+        Me.aceptar = New System.Windows.Forms.Button
+        Me.cancelar = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'Label1
@@ -174,11 +176,31 @@ Partial Class ArticuloForm
         Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox2.TabIndex = 15
         '
+        'aceptar
+        '
+        Me.aceptar.Location = New System.Drawing.Point(167, 312)
+        Me.aceptar.Name = "aceptar"
+        Me.aceptar.Size = New System.Drawing.Size(75, 23)
+        Me.aceptar.TabIndex = 16
+        Me.aceptar.Text = "aceptar"
+        Me.aceptar.UseVisualStyleBackColor = True
+        '
+        'cancelar
+        '
+        Me.cancelar.Location = New System.Drawing.Point(347, 311)
+        Me.cancelar.Name = "cancelar"
+        Me.cancelar.Size = New System.Drawing.Size(75, 23)
+        Me.cancelar.TabIndex = 17
+        Me.cancelar.Text = "cancelar"
+        Me.cancelar.UseVisualStyleBackColor = True
+        '
         'ArticuloForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(733, 365)
+        Me.Controls.Add(Me.cancelar)
+        Me.Controls.Add(Me.aceptar)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.venta1)
@@ -217,5 +239,7 @@ Partial Class ArticuloForm
     Friend WithEvents stock1 As System.Windows.Forms.TextBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents aceptar As System.Windows.Forms.Button
+    Friend WithEvents cancelar As System.Windows.Forms.Button
 
 End Class
