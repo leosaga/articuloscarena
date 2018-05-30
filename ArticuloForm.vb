@@ -103,7 +103,7 @@
     End Sub
 
     Private Sub ArticuloForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        ComboBox2.DataSource = listaiva
+        ComboBox2.DataSource = listaiva_
 
     End Sub
 End Class
