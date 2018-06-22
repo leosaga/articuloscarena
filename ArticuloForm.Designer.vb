@@ -24,12 +24,12 @@ Partial Class ArticuloForm
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label
         Me.descripcion = New System.Windows.Forms.Label
-        Me.unidad = New System.Windows.Forms.Label
-        Me.stock = New System.Windows.Forms.Label
-        Me.costo = New System.Windows.Forms.Label
+        Me.unidadlbl = New System.Windows.Forms.Label
+        Me.stocklbl = New System.Windows.Forms.Label
+        Me.costolbl = New System.Windows.Forms.Label
         Me.iva = New System.Windows.Forms.Label
-        Me.utilidad = New System.Windows.Forms.Label
-        Me.venta = New System.Windows.Forms.Label
+        Me.utilidadlbl = New System.Windows.Forms.Label
+        Me.ventalbl = New System.Windows.Forms.Label
         Me.codigo = New System.Windows.Forms.TextBox
         Me.descripcion1 = New System.Windows.Forms.TextBox
         Me.costo1 = New System.Windows.Forms.TextBox
@@ -60,32 +60,32 @@ Partial Class ArticuloForm
         Me.descripcion.TabIndex = 1
         Me.descripcion.Text = "Descripcion"
         '
-        'unidad
+        'unidadlbl
         '
-        Me.unidad.AutoSize = True
-        Me.unidad.Location = New System.Drawing.Point(47, 79)
-        Me.unidad.Name = "unidad"
-        Me.unidad.Size = New System.Drawing.Size(39, 13)
-        Me.unidad.TabIndex = 2
-        Me.unidad.Text = "unidad"
+        Me.unidadlbl.AutoSize = True
+        Me.unidadlbl.Location = New System.Drawing.Point(47, 79)
+        Me.unidadlbl.Name = "unidadlbl"
+        Me.unidadlbl.Size = New System.Drawing.Size(39, 13)
+        Me.unidadlbl.TabIndex = 2
+        Me.unidadlbl.Text = "unidad"
         '
-        'stock
+        'stocklbl
         '
-        Me.stock.AutoSize = True
-        Me.stock.Location = New System.Drawing.Point(47, 116)
-        Me.stock.Name = "stock"
-        Me.stock.Size = New System.Drawing.Size(35, 13)
-        Me.stock.TabIndex = 3
-        Me.stock.Text = "Stock"
+        Me.stocklbl.AutoSize = True
+        Me.stocklbl.Location = New System.Drawing.Point(47, 116)
+        Me.stocklbl.Name = "stocklbl"
+        Me.stocklbl.Size = New System.Drawing.Size(35, 13)
+        Me.stocklbl.TabIndex = 3
+        Me.stocklbl.Text = "Stock"
         '
-        'costo
+        'costolbl
         '
-        Me.costo.AutoSize = True
-        Me.costo.Location = New System.Drawing.Point(47, 153)
-        Me.costo.Name = "costo"
-        Me.costo.Size = New System.Drawing.Size(34, 13)
-        Me.costo.TabIndex = 4
-        Me.costo.Text = "Costo"
+        Me.costolbl.AutoSize = True
+        Me.costolbl.Location = New System.Drawing.Point(47, 153)
+        Me.costolbl.Name = "costolbl"
+        Me.costolbl.Size = New System.Drawing.Size(34, 13)
+        Me.costolbl.TabIndex = 4
+        Me.costolbl.Text = "Costo"
         '
         'iva
         '
@@ -96,23 +96,23 @@ Partial Class ArticuloForm
         Me.iva.TabIndex = 5
         Me.iva.Text = "Iva"
         '
-        'utilidad
+        'utilidadlbl
         '
-        Me.utilidad.AutoSize = True
-        Me.utilidad.Location = New System.Drawing.Point(47, 220)
-        Me.utilidad.Name = "utilidad"
-        Me.utilidad.Size = New System.Drawing.Size(42, 13)
-        Me.utilidad.TabIndex = 6
-        Me.utilidad.Text = "Utilidad"
+        Me.utilidadlbl.AutoSize = True
+        Me.utilidadlbl.Location = New System.Drawing.Point(47, 220)
+        Me.utilidadlbl.Name = "utilidadlbl"
+        Me.utilidadlbl.Size = New System.Drawing.Size(42, 13)
+        Me.utilidadlbl.TabIndex = 6
+        Me.utilidadlbl.Text = "Utilidad"
         '
-        'venta
+        'ventalbl
         '
-        Me.venta.AutoSize = True
-        Me.venta.Location = New System.Drawing.Point(47, 247)
-        Me.venta.Name = "venta"
-        Me.venta.Size = New System.Drawing.Size(35, 13)
-        Me.venta.TabIndex = 7
-        Me.venta.Text = "Venta"
+        Me.ventalbl.AutoSize = True
+        Me.ventalbl.Location = New System.Drawing.Point(47, 247)
+        Me.ventalbl.Name = "ventalbl"
+        Me.ventalbl.Size = New System.Drawing.Size(35, 13)
+        Me.ventalbl.TabIndex = 7
+        Me.ventalbl.Text = "Venta"
         '
         'codigo
         '
@@ -209,12 +209,12 @@ Partial Class ArticuloForm
         Me.Controls.Add(Me.stock1)
         Me.Controls.Add(Me.descripcion1)
         Me.Controls.Add(Me.codigo)
-        Me.Controls.Add(Me.venta)
-        Me.Controls.Add(Me.utilidad)
+        Me.Controls.Add(Me.ventalbl)
+        Me.Controls.Add(Me.utilidadlbl)
         Me.Controls.Add(Me.iva)
-        Me.Controls.Add(Me.costo)
-        Me.Controls.Add(Me.stock)
-        Me.Controls.Add(Me.unidad)
+        Me.Controls.Add(Me.costolbl)
+        Me.Controls.Add(Me.stocklbl)
+        Me.Controls.Add(Me.unidadlbl)
         Me.Controls.Add(Me.descripcion)
         Me.Controls.Add(Me.Label1)
         Me.Name = "ArticuloForm"
@@ -225,12 +225,12 @@ Partial Class ArticuloForm
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents descripcion As System.Windows.Forms.Label
-    Friend WithEvents unidad As System.Windows.Forms.Label
-    Friend WithEvents stock As System.Windows.Forms.Label
-    Friend WithEvents costo As System.Windows.Forms.Label
+    Friend WithEvents unidadlbl As System.Windows.Forms.Label
+    Friend WithEvents stocklbl As System.Windows.Forms.Label
+    Friend WithEvents costolbl As System.Windows.Forms.Label
     Friend WithEvents iva As System.Windows.Forms.Label
-    Friend WithEvents utilidad As System.Windows.Forms.Label
-    Friend WithEvents venta As System.Windows.Forms.Label
+    Friend WithEvents utilidadlbl As System.Windows.Forms.Label
+    Friend WithEvents ventalbl As System.Windows.Forms.Label
     Friend WithEvents codigo As System.Windows.Forms.TextBox
     Friend WithEvents descripcion1 As System.Windows.Forms.TextBox
     Friend WithEvents costo1 As System.Windows.Forms.TextBox

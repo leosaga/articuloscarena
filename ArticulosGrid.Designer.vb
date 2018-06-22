@@ -24,20 +24,20 @@ Partial Class ArticulosGrid
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.CodigoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.CostoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.IvaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.UtilidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.UnidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.StockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.VentaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DetalleivaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ArticulosCollectionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.nuevo = New System.Windows.Forms.Button
         Me.eleminar = New System.Windows.Forms.Button
         Me.modificar = New System.Windows.Forms.Button
         Me.salir = New System.Windows.Forms.Button
-        Me.ArticulosCollectionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CodigoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.IvaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.UnidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.StockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.CostoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.UtilidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.VentaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DetalleivaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ArticulosCollectionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -48,13 +48,82 @@ Partial Class ArticulosGrid
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CodigoDataGridViewTextBoxColumn, Me.IvaDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.UnidadDataGridViewTextBoxColumn, Me.StockDataGridViewTextBoxColumn, Me.CostoDataGridViewTextBoxColumn, Me.UtilidadDataGridViewTextBoxColumn, Me.VentaDataGridViewTextBoxColumn, Me.DetalleivaDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CodigoDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.CostoDataGridViewTextBoxColumn, Me.IvaDataGridViewTextBoxColumn, Me.UtilidadDataGridViewTextBoxColumn, Me.UnidadDataGridViewTextBoxColumn, Me.StockDataGridViewTextBoxColumn, Me.VentaDataGridViewTextBoxColumn, Me.DetalleivaDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ArticulosCollectionBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 22)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 3)
+        Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(961, 354)
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(941, 354)
         Me.DataGridView1.TabIndex = 0
+        '
+        'CodigoDataGridViewTextBoxColumn
+        '
+        Me.CodigoDataGridViewTextBoxColumn.DataPropertyName = "codigo"
+        Me.CodigoDataGridViewTextBoxColumn.HeaderText = "codigo"
+        Me.CodigoDataGridViewTextBoxColumn.Name = "CodigoDataGridViewTextBoxColumn"
+        Me.CodigoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DescripcionDataGridViewTextBoxColumn
+        '
+        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
+        Me.DescripcionDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CostoDataGridViewTextBoxColumn
+        '
+        Me.CostoDataGridViewTextBoxColumn.DataPropertyName = "costo"
+        Me.CostoDataGridViewTextBoxColumn.HeaderText = "costo"
+        Me.CostoDataGridViewTextBoxColumn.Name = "CostoDataGridViewTextBoxColumn"
+        Me.CostoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'IvaDataGridViewTextBoxColumn
+        '
+        Me.IvaDataGridViewTextBoxColumn.DataPropertyName = "iva"
+        Me.IvaDataGridViewTextBoxColumn.HeaderText = "iva"
+        Me.IvaDataGridViewTextBoxColumn.Name = "IvaDataGridViewTextBoxColumn"
+        Me.IvaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'UtilidadDataGridViewTextBoxColumn
+        '
+        Me.UtilidadDataGridViewTextBoxColumn.DataPropertyName = "utilidad"
+        Me.UtilidadDataGridViewTextBoxColumn.HeaderText = "utilidad"
+        Me.UtilidadDataGridViewTextBoxColumn.Name = "UtilidadDataGridViewTextBoxColumn"
+        Me.UtilidadDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'UnidadDataGridViewTextBoxColumn
+        '
+        Me.UnidadDataGridViewTextBoxColumn.DataPropertyName = "unidad"
+        Me.UnidadDataGridViewTextBoxColumn.HeaderText = "unidad"
+        Me.UnidadDataGridViewTextBoxColumn.Name = "UnidadDataGridViewTextBoxColumn"
+        Me.UnidadDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'StockDataGridViewTextBoxColumn
+        '
+        Me.StockDataGridViewTextBoxColumn.DataPropertyName = "stock"
+        Me.StockDataGridViewTextBoxColumn.HeaderText = "stock"
+        Me.StockDataGridViewTextBoxColumn.Name = "StockDataGridViewTextBoxColumn"
+        Me.StockDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'VentaDataGridViewTextBoxColumn
+        '
+        Me.VentaDataGridViewTextBoxColumn.DataPropertyName = "venta"
+        Me.VentaDataGridViewTextBoxColumn.HeaderText = "venta"
+        Me.VentaDataGridViewTextBoxColumn.Name = "VentaDataGridViewTextBoxColumn"
+        Me.VentaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DetalleivaDataGridViewTextBoxColumn
+        '
+        Me.DetalleivaDataGridViewTextBoxColumn.DataPropertyName = "detalleiva"
+        Me.DetalleivaDataGridViewTextBoxColumn.HeaderText = "detalleiva"
+        Me.DetalleivaDataGridViewTextBoxColumn.Name = "DetalleivaDataGridViewTextBoxColumn"
+        Me.DetalleivaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ArticulosCollectionBindingSource
+        '
+        Me.ArticulosCollectionBindingSource.DataSource = GetType(WindowsApplication1.ArticulosCollection)
         '
         'nuevo
         '
@@ -71,7 +140,7 @@ Partial Class ArticulosGrid
         Me.eleminar.Name = "eleminar"
         Me.eleminar.Size = New System.Drawing.Size(75, 23)
         Me.eleminar.TabIndex = 2
-        Me.eleminar.Text = "Eleminar"
+        Me.eleminar.Text = "Eliminar"
         Me.eleminar.UseVisualStyleBackColor = True
         '
         'modificar
@@ -91,73 +160,6 @@ Partial Class ArticulosGrid
         Me.salir.TabIndex = 4
         Me.salir.Text = "salir"
         Me.salir.UseVisualStyleBackColor = True
-        '
-        'ArticulosCollectionBindingSource
-        '
-        Me.ArticulosCollectionBindingSource.DataSource = GetType(WindowsApplication1.ArticulosCollection)
-        '
-        'CodigoDataGridViewTextBoxColumn
-        '
-        Me.CodigoDataGridViewTextBoxColumn.DataPropertyName = "codigo"
-        Me.CodigoDataGridViewTextBoxColumn.HeaderText = "codigo"
-        Me.CodigoDataGridViewTextBoxColumn.Name = "CodigoDataGridViewTextBoxColumn"
-        Me.CodigoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'IvaDataGridViewTextBoxColumn
-        '
-        Me.IvaDataGridViewTextBoxColumn.DataPropertyName = "iva"
-        Me.IvaDataGridViewTextBoxColumn.HeaderText = "iva"
-        Me.IvaDataGridViewTextBoxColumn.Name = "IvaDataGridViewTextBoxColumn"
-        Me.IvaDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DescripcionDataGridViewTextBoxColumn
-        '
-        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
-        Me.DescripcionDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'UnidadDataGridViewTextBoxColumn
-        '
-        Me.UnidadDataGridViewTextBoxColumn.DataPropertyName = "unidad"
-        Me.UnidadDataGridViewTextBoxColumn.HeaderText = "unidad"
-        Me.UnidadDataGridViewTextBoxColumn.Name = "UnidadDataGridViewTextBoxColumn"
-        Me.UnidadDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'StockDataGridViewTextBoxColumn
-        '
-        Me.StockDataGridViewTextBoxColumn.DataPropertyName = "stock"
-        Me.StockDataGridViewTextBoxColumn.HeaderText = "stock"
-        Me.StockDataGridViewTextBoxColumn.Name = "StockDataGridViewTextBoxColumn"
-        Me.StockDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CostoDataGridViewTextBoxColumn
-        '
-        Me.CostoDataGridViewTextBoxColumn.DataPropertyName = "costo"
-        Me.CostoDataGridViewTextBoxColumn.HeaderText = "costo"
-        Me.CostoDataGridViewTextBoxColumn.Name = "CostoDataGridViewTextBoxColumn"
-        Me.CostoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'UtilidadDataGridViewTextBoxColumn
-        '
-        Me.UtilidadDataGridViewTextBoxColumn.DataPropertyName = "utilidad"
-        Me.UtilidadDataGridViewTextBoxColumn.HeaderText = "utilidad"
-        Me.UtilidadDataGridViewTextBoxColumn.Name = "UtilidadDataGridViewTextBoxColumn"
-        Me.UtilidadDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'VentaDataGridViewTextBoxColumn
-        '
-        Me.VentaDataGridViewTextBoxColumn.DataPropertyName = "venta"
-        Me.VentaDataGridViewTextBoxColumn.HeaderText = "venta"
-        Me.VentaDataGridViewTextBoxColumn.Name = "VentaDataGridViewTextBoxColumn"
-        Me.VentaDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DetalleivaDataGridViewTextBoxColumn
-        '
-        Me.DetalleivaDataGridViewTextBoxColumn.DataPropertyName = "detalleiva"
-        Me.DetalleivaDataGridViewTextBoxColumn.HeaderText = "detalleiva"
-        Me.DetalleivaDataGridViewTextBoxColumn.Name = "DetalleivaDataGridViewTextBoxColumn"
-        Me.DetalleivaDataGridViewTextBoxColumn.ReadOnly = True
         '
         'ArticulosGrid
         '
@@ -183,12 +185,12 @@ Partial Class ArticulosGrid
     Friend WithEvents modificar As System.Windows.Forms.Button
     Friend WithEvents salir As System.Windows.Forms.Button
     Friend WithEvents CodigoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents IvaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DescripcionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CostoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents IvaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents UtilidadDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents UnidadDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents StockDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents CostoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents UtilidadDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents VentaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DetalleivaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ArticulosCollectionBindingSource As System.Windows.Forms.BindingSource

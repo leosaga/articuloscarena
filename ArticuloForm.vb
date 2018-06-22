@@ -27,16 +27,24 @@
         Me.Close()
     End Sub
     Private Sub Aceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles aceptar.Click
+
         miarticulo.codigo = CInt(codigo.Text)
+
         'cint comvierta a entero
         miarticulo.descripcion = descripcion1.Text
+
         'saca el texto
         miarticulo.unidad = ComboBox1.SelectedItem
-        miarticulo.stock = CDec(stock1.Text)
+
+        miarticulo.stock = CInt(stock1.Text)
+
         'saca la fila o numero
         miarticulo.iva = ComboBox2.SelectedIndex
+
         miarticulo.costo = CDec(costo1.Text)
+
         miarticulo.utilidad = CDec(utilidad1.Text)
+
         Select Case operacion_
             Case "alta"
                 lst.Add(miarticulo)
@@ -101,9 +109,17 @@
         End If
 
     End Sub
+    ' no te deja en el texbox de edad no tipear
+
+    Private Sub AlumnoForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        venta1.Enabled = False
+        venta1.ReadOnly = True
+    End Sub
 
     Private Sub ArticuloForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ComboBox2.DataSource = listaiva_
 
     End Sub
+
+   
 End Class
